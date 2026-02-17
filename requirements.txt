@@ -1,0 +1,34 @@
+
+# Core LangChain
+langchain
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+
+# Vector DB
+faiss-cpu
+
+# Embeddings + LLM
+sentence-transformers
+transformers
+torch
+
+# PDF handling
+PyPDF2
+
+# Voice
+SpeechRecognition
+pyttsx3
+pypiwin32
+
+# Frontend
+streamlit
+
+# Utilities
+huggingface_hub
+requests
+
+# pip install -r requirements.txt
+
+# uvicorn api:app --reload
+# streamlit run app.py
