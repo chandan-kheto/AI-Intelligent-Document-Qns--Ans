@@ -3,8 +3,8 @@ from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 import shutil, os
 
-from rag_engine import RAGEngine
-from document_loader import extract_text  # 🔥 import generic loader
+from .rag_engine import RAGEngine
+from .document_loader import extract_text  # 🔥 import generic loader
 
 app = FastAPI(title="AI Document Intelligence API")
 
@@ -30,7 +30,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 @app.post("/upload")
 async def upload_document(file: UploadFile = File(...)):
     try:
-        filename = os.path.basename(file.filename)
+        filename = os.path.basename(file.filename or "uploaded_file")
+
         temp_path = os.path.join(BASE_DIR, f"temp_{filename}")
 
         with open(temp_path, "wb") as buffer:
