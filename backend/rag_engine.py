@@ -1,12 +1,13 @@
 
-import os, config
+import os
+from . import config
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-from llm_loader import load_llm
-from embedding_loader import load_embeddings
+from .llm_loader import load_llm
+from .embedding_loader import load_embeddings
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
