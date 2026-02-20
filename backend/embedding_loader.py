@@ -1,6 +1,6 @@
 
 from langchain_huggingface import HuggingFaceEmbeddings
-import config
+from . import config
 
 
 def load_embeddings():
