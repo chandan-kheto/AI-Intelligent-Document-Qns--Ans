@@ -1,7 +1,7 @@
 
 from transformers import pipeline
 from langchain_community.llms import HuggingFacePipeline
-import config
+from . import config
 
 
 def load_llm():
